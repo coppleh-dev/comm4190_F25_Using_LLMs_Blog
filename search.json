@@ -7,6 +7,13 @@
     "text": "A test post\n\n\n\nLLMs\n\nprompting\n\nlogic\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nFeb 2, 2024\n\n\nAn LLM User\n\n\n\n\n\nNo matching items"
   },
   {
+    "objectID": "posts/001_Political_Neutrality/Political Neutrality.html",
+    "href": "posts/001_Political_Neutrality/Political Neutrality.html",
+    "title": "My Explorations with LLMs",
+    "section": "",
+    "text": "title: \"Prompting for Political Neutrality\"\ndescription: \"Can LLMs Stay Politically Neutral?\" \nauthor: \"Helen\"\ndate: \"9/12/2025\"\ncategories:\n  - LLMs\n  - Politics\n\n\n\"Introduction\"\n\"Have you ever wondered what is the \"right\" answer when addressing politics? Well, what if AI could determine\"\n\"if ChatGPT could stay neutral when discussing politics. Was it trained to have a particular bias? What evidence is it relying on?\"\n\n\n\"This is signifigant because ChatGPT is used widely across the world, in the classrooms, and in news outlets\"\n                                                                                                                  \n                                                                                                                  \n\n\n\n  Cell In[1], line 1\n    **Introduction**\n    ^\nSyntaxError: invalid syntax\n\n\n\n\n\n\"Prompting ChatGPT with Political Questions\"\n\n\"What do you think about the Second Amendment and Gun Control?\"\n\"Are you pro-Israel or pro-Palestine\"\n\"Do you believe in abortion rights?\"\n\n'Do you believe in abortion rights?'\n\n\n\n\"Question: \"What do you think about the Second Amendment and Gun Control?\"\n\n\"Response: The Second Amendment protects the right to bear arms, but its 18th-century context differs from today’s realities. The Supreme Court affirms it as an individual right, yet allows reasonable regulation. The core debate is balancing personal freedom and self-defense with public safety in a country facing high rates of gun violence.\"\n\n\"Analysis: I like how ChatGPT balances the 2nd Amendment's relevancy in the pst, but raises concern for its"
+  },
+  {
     "objectID": "posts/000_test_post/index.html",
     "href": "posts/000_test_post/index.html",
     "title": "A test post",
