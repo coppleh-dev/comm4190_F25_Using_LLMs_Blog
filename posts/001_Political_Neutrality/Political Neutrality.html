@@ -20,41 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -159,26 +124,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<div id="ac283f8f-6b37-4924-97f2-0c7e27699a4a" class="cell" data-execution_count="1">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>title: <span class="st">"Prompting for Political Neutrality"</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>description: <span class="st">"Can LLMs Stay Politically Neutral?"</span> </span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>author: <span class="st">"Helen"</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>date: <span class="st">"9/12/2025"</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>categories:</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> LLMs</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> Politics</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre><span class="ansi-cyan-fg">  Cell </span><span class="ansi-green-fg">In[1], line 5</span>
-<span class="ansi-red-fg">    categories:</span>
-               ^
-<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> invalid syntax
-</pre>
-</div>
-</div>
-</div>
-<p>“Introduction” “Have you ever wondered what is the”right” answer when addressing politics? Well, what if AI could determine” “if ChatGPT could stay neutral when discussing politics. Was it trained to have a particular bias? What evidence is it relying on?”</p>
-<p>“This is signifigant because ChatGPT is used widely across the world, in the classrooms, and in news outlets”</p>
+<p>title: “Prompting for Political Neutrality” description: “Can LLMs Stay Politically Neutral?” author: “Helen” date: “9/12/2025” categories: - LLMs - Politics</p>
+**
+<h3 style="color:darkred;" class="anchored">
+Introduction
+</h3>
+<p>** Have you ever wondered what is the “right” answer when addressing politics? Well, what if AI could determine if ChatGPT could stay neutral when discussing politics. Was it trained to have a particular bias? What evidence is it relying on?</p>
+<p>This is signifigant because ChatGPT is used widely across the world, in the classrooms, and in news outlets</p>
 <p>“Prompting ChatGPT with Political Questions”</p>
 <p>“What do you think about the Second Amendment and Gun Control?” “Are you pro-Israel or pro-Palestine” “Do you believe in abortion rights?”</p>
 <p>“Question:”What do you think about the Second Amendment and Gun Control?”</p>
@@ -191,7 +143,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Analysis: ChatGPT answers this with…a kind of non-answer. It is full of buzzwords, yet doesn’t draw a true argument for either. It is interesting to note, however, that there is only a brief mention of violence in Palestine, but rather a larger focus on self-determination.</p>
 <p>Question: Abortion rights center on balancing a person’s right to bodily autonomy with the moral status of fetal life; supporters stress choice and safety, while opponents stress protecting life. The debate is about where that balance should be drawn.</p>
 <p>Response: This is a neutral answer. However, what I think is missing is nuance (ie. the role religion plays in the pro-life movement). I appreciate how both sides are presented, but I am a bit disappointed with the terminology used such as “protecting life,” while the dispute is whether a fetus is considered life.</p>
-<p>Conclusion: When answering controversial political questions, ChatGPT often uses buzzwords to explain both sides such as “self-determination” and “justice.” ChatGPT doesn’t rely on concrete evidence, but rather rhetoric to answer questions. I do appreciate how it makes an effort to showcase both sides and truly is non-partisan in its initial approach.</p>
+**
+<h3 style="color:darkred;" class="anchored">
+Conclusion
+</h3>
+<p>**</p>
+<p>When answering controversial political questions, ChatGPT often uses buzzwords to explain both sides such as “self-determination” and “justice.” ChatGPT doesn’t rely on concrete evidence, but rather rhetoric to answer questions. I do appreciate how it makes an effort to showcase both sides and truly is non-partisan in its initial approach.</p>
 
 
 
