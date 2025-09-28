@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Helen">
+<meta name="dcterms.date" content="2025-09-25">
+<meta name="description" content="Can LLMs make Videos of me based on my picture?">
 
-<title>Helen’s Explorations with LLMs – My Explorations with LLMs</title>
+<title>AI Videos – My Explorations with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,29 +23,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-a8515150ab97b067293ad520a6a68df1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-a8515150ab97b067293ad520a6a68df1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,79 +106,24 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
 
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">My Explorations with LLMs</span>
     </a>
   </div>
@@ -153,7 +134,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -176,292 +157,162 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Helen’s Explorations with LLMs</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">AI Videos</h1>
+                  <div>
+        <div class="description">
+          Can LLMs make Videos of me based on my picture?
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">LLMs</div>
+                <div class="quarto-category">Videos</div>
+                <div class="quarto-category">Prompting</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Helen </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">September 25, 2025</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(10)</span></div><div class="category" data-category="Zm9vZA==">food <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RnJpZW5kc2hpcA==">Friendship <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SW1hZ2Vz">Images <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TExNcw==">LLMs <span class="quarto-category-count">(4)</span></div><div class="category" data-category="bG9naWM=">logic <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJvbXB0aW5n">prompting <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UHJvbXB0aW5n">Prompting <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VmlkZW9z">Videos <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1759088526831" data-listing-reading-time-sort="7" data-listing-word-count-sort="1297">
-<div class="thumbnail"><a href="./posts/002_LLMs_different_slang/Slang.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/002_LLMs_different_slang/Slang.html" class="no-external"></a>
-</h3>
-<div class="delink listing-description"><a href="./posts/002_LLMs_different_slang/Slang.html" class="no-external">
-title: “Prompting for Slang &amp; Speech” description: “How do LLMs interpret slang/speech?” author: “Helen” date: “9/12/2025” categories: - LLMs - Sociology
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/002_LLMs_different_slang/Slang.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1759088526831" data-listing-reading-time-sort="10" data-listing-word-count-sort="1907">
-<div class="thumbnail"><a href="./posts/003_Vacation/Plan_Vacation.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/003_Vacation/Plan_Vacation.html" class="no-external"></a>
-</h3>
-<div class="delink listing-description"><a href="./posts/003_Vacation/Plan_Vacation.html" class="no-external">
+**
+<h3 style="color:purple;" class="anchored">
 Introduction
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/003_Vacation/Plan_Vacation.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-listing-file-modified-sort="1759088526868" data-listing-reading-time-sort="3" data-listing-word-count-sort="564">
-<div class="thumbnail"><a href="./posts/005_Songs/005_Poems.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/005_Songs/005_Poems.html" class="no-external"></a>
 </h3>
-<div class="delink listing-description"><a href="./posts/005_Songs/005_Poems.html" class="no-external">
+<p>**</p>
+<p>As you have may seen from my blogs, I am extremely interested in making AI images and (now) with Gemini pro you can make videos! So, today, I am excited to try out different video making opportunities using AI. For some reason, I have this fascination of me as President (maybe I’m self absorbed), so I want to make videos of me as president during moments of my campaign.</p>
 **
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/005_Songs/005_Poems.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-listing-file-modified-sort="1759088526831" data-listing-reading-time-sort="4" data-listing-word-count-sort="649">
-<div class="thumbnail"><a href="./posts/001_Political_Neutrality/Political Neutrality.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/001_Political_Neutrality/Political Neutrality.html" class="no-external"></a>
+<h3 style="color:purple;" class="anchored">
+Prompt #1
 </h3>
-<div class="delink listing-description"><a href="./posts/001_Political_Neutrality/Political Neutrality.html" class="no-external">
-** Have you ever wondered what is the “right” answer when addressing politics? Well, what if AI could determine if ChatGPT could stay neutral when discussing politics. Was…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/001_Political_Neutrality/Political Neutrality.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-listing-file-modified-sort="1759088526869" data-listing-reading-time-sort="3" data-listing-word-count-sort="454">
-<div class="thumbnail"><a href="./posts/006_AI _Me/AI_Me.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/006_AI _Me/AI_Me.html" class="no-external"></a>
-</h3>
-<div class="delink listing-description"><a href="./posts/006_AI _Me/AI_Me.html" class="no-external">
+<p>**</p>
+<p>Make a video of me as running a campagn for U.S. presidency. Make the video as close to the image as me as possible facial wise. My values include promoting democracy, universal healthcare and education, and social justice initiatives.</p>
 **
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/006_AI _Me/AI_Me.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-listing-file-modified-sort="1759088526881" data-listing-reading-time-sort="4" data-listing-word-count-sort="718">
-<div class="thumbnail"><a href="./posts/007_Trader_Joes/Trader_Joes.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/007_Trader_Joes/Trader_Joes.html" class="no-external"></a>
+<h3 style="color:purple;" class="anchored">
+Video #1
 </h3>
-<div class="delink listing-description"><a href="./posts/007_Trader_Joes/Trader_Joes.html" class="no-external">
+<p>**</p>
+<div id="05dfd16a-67e9-4563-b4bd-87ecaffbce2f" class="cell" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> Video</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Make sure the path to your video is correct.</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># If it's in the same folder, just the filename is enough.</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>video_path <span class="op">=</span> <span class="st">'President.mp4'</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the video</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>Video(video_path, width<span class="op">=</span><span class="dv">600</span>, height<span class="op">=</span><span class="dv">400</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<video src="President.mp4" controls="" width="600" height="400">
+      Your browser does not support the <code>video</code> element.
+    </video>
+</div>
+</div>
 **
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/007_Trader_Joes/Trader_Joes.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2Zvb2Q=" data-listing-date-sort="1758844800000" data-listing-file-modified-sort="1759088526863" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="267">
-<div class="thumbnail"><a href="./posts/004_Gyro/004_Images.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/004_Gyro/004_Images_files/figure-html/cell-12-output-1.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/004_Gyro/004_Images.html" class="no-external">Gyro Fun</a>
+<h3 style="color:purple;" class="anchored">
+Analysis #1
 </h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">prompting</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Zm9vZA=='); return false;">food</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/004_Gyro/004_Images.html" class="no-external">
-<p>Can dalle-e-3 make the perfect gyro?</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/004_Gyro/004_Images.html" class="no-external">
-<div class="listing-date">
-Sep 26, 2025
-</div>
-<div class="listing-author">
-Helen
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-categories="TExNcyUyQ1ZpZGVvcyUyQ1Byb21wdGluZw==" data-listing-date-sort="1758758400000" data-listing-file-modified-sort="1759088526959" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="379">
-<div class="thumbnail"><a href="./posts/009_AI_Videos/AI_Videos.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/009_AI_Videos/AI_Videos_files/figure-html/82a90218-f19e-47e8-9f20-b1d858a0ca0a-1-a69b7ede-b77e-498b-8b2a-d134aeeef9a9.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/009_AI_Videos/AI_Videos.html" class="no-external">AI Videos</a>
+<p>**</p>
+<p>Mmmm…this wasn’t the type of video I was looking for. I didn’t just want a moving picture, I wanted something more dynamic. I will try to do another prompt that more closely aligns with the 5 principles of prompting: specificity, examples, identifying issues, etc.</p>
+**
+<h3 style="color:purple;" class="anchored">
+Prompt #1
 </h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('VmlkZW9z'); return false;">Videos</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UHJvbXB0aW5n'); return false;">Prompting</div>
-
+<p>**</p>
+<p>Make a new video BASED on this image. I want to be standing up giving a speech wearing a suit, make the background similar to that of a Kamala speech.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="AI_Videos_files/figure-html/82a90218-f19e-47e8-9f20-b1d858a0ca0a-1-a69b7ede-b77e-498b-8b2a-d134aeeef9a9.png" class="img-fluid figure-img"></p>
+<figcaption>Screen Shot 2025-09-28 at 2.55.33 PM.png</figcaption>
+</figure>
 </div>
-<div class="delink listing-description"><a href="./posts/009_AI_Videos/AI_Videos.html" class="no-external">
-<p>Can LLMs make Videos of me based on my picture?</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/009_AI_Videos/AI_Videos.html" class="no-external">
-<div class="listing-date">
-Sep 25, 2025
-</div>
-<div class="listing-author">
-Helen
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="8" data-categories="TExNcyUyQ0ZyaWVuZHNoaXAlMkNJbWFnZXM=" data-listing-date-sort="1758672000000" data-listing-file-modified-sort="1759088526937" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="278">
-<div class="thumbnail"><a href="./posts/008_Rafi_and_I/008_Rafi_and_I.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/008_Rafi_and_I/008_Rafi_and_I_files/figure-html/fcdf8380-6e8c-48ef-8bf9-4cba8a4d8650-1-91e382c0-9b65-4386-a745-4cc0ce8c5df3.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/008_Rafi_and_I/008_Rafi_and_I.html" class="no-external">Prompting AI images for my friend Rafi and I</a>
+<p>Uh oh! For some reason Gemini refuses to make these videos, so I am going to try to reprompt and see what kind of videos Gemini WILL make. I clicked on the “Learn more” section and I thin this has something to do with their policy guidelines, so I will try to use a simple prompt that maybe doesn’t lean so political.</p>
+**
+<h3 style="color:purple;" class="anchored">
+Prompt #2
 </h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('RnJpZW5kc2hpcA=='); return false;">Friendship</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SW1hZ2Vz'); return false;">Images</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/008_Rafi_and_I/008_Rafi_and_I.html" class="no-external">
-<p>Can LLMs make the perfect vacation pictures of Rafi and I?</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/008_Rafi_and_I/008_Rafi_and_I.html" class="no-external">
-<div class="listing-date">
-Sep 24, 2025
-</div>
-<div class="listing-author">
-An LLM User
-</div>
-</a>
+<p>**</p>
+<p>make a video of me as president</p>
+<div id="5c2c8115-41af-4948-8128-0712de75ff6d" class="cell" data-execution_count="7">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> Video</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Make sure the path to your video is correct.</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># If it's in the same folder, just the filename is enough.</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>video_path <span class="op">=</span> <span class="st">'president_two.mp4'</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the video</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>Video(video_path, width<span class="op">=</span><span class="dv">600</span>, height<span class="op">=</span><span class="dv">400</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="7">
+<video src="president_two.mp4" controls="" width="600" height="400">
+      Your browser does not support the <code>video</code> element.
+    </video>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2xvZ2lj" data-listing-date-sort="1706832000000" data-listing-file-modified-sort="1759088526830" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="450">
-<div class="thumbnail"><a href="./posts/000_test_post/index.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/000_test_post/gpt3-5.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/000_test_post/index.html" class="no-external">A test post</a>
+**
+<h3 style="color:purple;" class="anchored">
+Analysis #2
 </h3>
-<div class="listing-categories">
+<p>**</p>
+<p>So apparently Gemini did not understand to use the image of me. Becuase, clearly, this is not me. I will reprompt again so (hopefully!!!!) it is ME giving the speech.</p>
+**
+<h3 style="color:purple;" class="anchored">
+Prompt #2
+</h3>
+<p>**</p>
+<p>use this image of me to generate a video of me giving a speech on a podium to the united states</p>
+<div id="c05b968e-e2d8-4c37-8fed-32cc19c81ce3" class="cell" data-execution_count="12">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> Video</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Make sure the path to your video is correct.</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># If it's in the same folder, just the filename is enough.</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>video_path <span class="op">=</span> <span class="st">'last_video.mp4'</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the video</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>Video(video_path, width<span class="op">=</span><span class="dv">600</span>, height<span class="op">=</span><span class="dv">400</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="12">
+<video src="last_video.mp4" controls="" width="600" height="400">
+      Your browser does not support the <code>video</code> element.
+    </video>
+</div>
+</div>
+**
+<h3 style="color:purple;" class="anchored">
+Analysis #3
+</h3>
+<p>**</p>
+<p>Sigh. Well, this is disappointing. I guess Gemini cannot make me a video of my dream presidential campaign. I wonder if other models of LLMs can (I assume so as they are very popular on TikTok). Well, even though I could not prompt Gemini to mkae me my perfect campaign video, it was stilla fun time!</p>
 
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
 
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">prompting</div>
 
-<div class="listing-category" onclick="window.quartoListingCategory('bG9naWM='); return false;">logic</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/000_test_post/index.html" class="no-external">
-<p>An example post from a Jupyter notebook</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/000_test_post/index.html" class="no-external">
-<div class="listing-date">
-Feb 2, 2024
-</div>
-<div class="listing-author">
-An LLM User
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
