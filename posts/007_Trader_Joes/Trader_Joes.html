@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>political-neutrality – My Explorations with LLMs</title>
+<title>trader_joes – My Explorations with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -129,12 +129,12 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td>ti</td>
 <td>tl</td>
-<td>e: “Prompting for Political Neutrality”</td>
+<td>e: “Prompting for Trader Joes Gender-specific grocery order”</td>
 </tr>
 <tr class="even">
 <td>de</td>
 <td>sc</td>
-<td>ription: “Can LLMs Stay Politically Neutral?”</td>
+<td>ription: “Can LLMs interpret grocery lists by gender?”</td>
 </tr>
 <tr class="odd">
 <td>au</td>
@@ -144,7 +144,7 @@ ul.task-list li input[type="checkbox"] {
 <tr class="even">
 <td>da</td>
 <td>te</td>
-<td>: “9/12/2025”</td>
+<td>: “9/20/2025”</td>
 </tr>
 <tr class="odd">
 <td>ca</td>
@@ -159,34 +159,108 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td></td>
 <td>-</td>
-<td>Politics</td>
+<td>Food</td>
 </tr>
 </tbody>
 </table>
 **
-<h3 style="color:darkred;" class="anchored">
+<h3 style="color:purple;" class="anchored">
 Introduction
 </h3>
-<p>** Have you ever wondered what is the “right” answer when addressing politics? Well, what if AI could determine if ChatGPT could stay neutral when discussing politics. Was it trained to have a particular bias? What evidence is it relying on?</p>
-<p>This is signifigant because ChatGPT is used widely across the world, in the classrooms, and in news outlets</p>
-<p>“Prompting ChatGPT with Political Questions”</p>
-<p>“What do you think about the Second Amendment and Gun Control?” “Are you pro-Israel or pro-Palestine” “Do you believe in abortion rights?”</p>
-<p>“Question:”What do you think about the Second Amendment and Gun Control?”</p>
-<p>“Response: The Second Amendment protects the right to bear arms, but its 18th-century context differs from today’s realities. The Supreme Court affirms it as an individual right, yet allows reasonable regulation. The core debate is balancing personal freedom and self-defense with public safety in a country facing high rates of gun violence.”</p>
-<p>“Analysis: I like how ChatGPT balances the 2nd Amendment’s relevancy in the pst, but raises concern for its relevancy to the present.”</p>
-<p>Question: Are you Pro-Israel or Pro-Palestine?</p>
-<p>Response: The Israeli–Palestinian conflict is complex, rooted in history, land, security, and human rights.</p>
-<p>Pro-Israel: stresses Israel’s right to exist and defend itself.</p>
-<p>Pro-Palestine: stresses Palestinians’ right to self-determination and freedom from occupation. Many frame the issue as pro-peace, seeking coexistence, security for Israelis, and justice for Palestinians.</p>
-<p>Analysis: ChatGPT answers this with…a kind of non-answer. It is full of buzzwords, yet doesn’t draw a true argument for either. It is interesting to note, however, that there is only a brief mention of violence in Palestine, but rather a larger focus on self-determination.</p>
-<p>Question: Abortion rights center on balancing a person’s right to bodily autonomy with the moral status of fetal life; supporters stress choice and safety, while opponents stress protecting life. The debate is about where that balance should be drawn.</p>
-<p>Response: This is a neutral answer. However, what I think is missing is nuance (ie. the role religion plays in the pro-life movement). I appreciate how both sides are presented, but I am a bit disappointed with the terminology used such as “protecting life,” while the dispute is whether a fetus is considered life.</p>
+<p>**</p>
+<p>I am pivoting to grocery shopping at Trader Joe’s as the Acme near my house is soo expensive. But, it got me thinking if Trader Joes interpreted grocery lists in a gender-specific way. So, today I am asking Google Gemini 2.5 pro about gender-specific grocery orders.</p>
 **
-<h3 style="color:darkred;" class="anchored">
-Conclusion
+<h3 style="color:purple;" class="anchored">
+Prompt #1
 </h3>
 <p>**</p>
-<p>When answering controversial political questions, ChatGPT often uses buzzwords to explain both sides such as “self-determination” and “justice.” ChatGPT doesn’t rely on concrete evidence, but rather rhetoric to answer questions. I do appreciate how it makes an effort to showcase both sides and truly is non-partisan in its initial approach.</p>
+<ol type="1">
+<li>Make a budget-friendly grocery shopping list for a week for a girl living alone using only Trader Joes items. Make the entire list under &lt;$70. *note: I had to add “for a ‘stereotrpical’ girl” into Gemini because at first it was refusing to recognize it was for a female, specifically.</li>
+</ol>
+**
+<h3 style="color:purple;" class="anchored">
+Response #1
+</h3>
+<p>**</p>
+<p>Trader Joe’s “Stereotypical Girl” Weekly List (Under $70) Produce</p>
+<p>Organic Strawberries (1 container): ~$3.99</p>
+<p>Bag of Avocados (4-count): ~$4.49</p>
+<p>Sweet Potato (1 large): ~$1.29</p>
+<p>Yellow Onion (1): ~$0.79</p>
+<p>Head of Garlic: ~$0.79</p>
+<p>Organic Baby Spinach: ~$2.29</p>
+<p>Broccoli Crowns (~1 lb): ~$2.49</p>
+<p>Organic Spring Mix Salad: ~$2.99</p>
+<p>Meat &amp; Protein</p>
+<p>Boneless, Skinless Chicken Breast (~1 lb): ~$6.99</p>
+<p>Spicy Italian Chicken Sausage (5 links): ~$4.99</p>
+<p>Dairy &amp; Eggs</p>
+<p>Cage-Free Brown Eggs (1 dozen): ~$3.99</p>
+<p>Plain Greek Yogurt (32 oz tub): ~$5.99</p>
+<p>Your choice of Milk (Half Gallon): ~$3.49</p>
+<p>Frozen Foods</p>
+<p>Cauliflower Gnocchi: ~$3.29 (Swapped for the black bean burgers)</p>
+<p>Frozen Brown Rice (box of 3 bags): ~$3.79</p>
+<p>Pantry &amp; Dry Goods</p>
+<p>Rolled Oats with Ancient Grains &amp; Seeds: ~$3.99</p>
+<p>Canned Black Beans: ~$0.99</p>
+<p>Tomato Basil Marinara Sauce: ~$1.99</p>
+<p>Whole Wheat Penne Pasta: ~$1.29</p>
+<p>Dark Chocolate Bar (e.g., Almonds &amp; Sea Salt): ~$1.99 (Added for a treat!)</p>
+<p>Soyaki or Low Sodium Soy Sauce: ~$3.49</p>
+<p>Estimated Grand Total: $68.58 Sample “Aesthetic” Meal Ideas: Breakfasts:</p>
+<p>Aesthetic Yogurt Bowl: A scoop of Greek yogurt topped with fresh, sliced strawberries.</p>
+<p>Oatmeal with sliced strawberries and a drizzle of honey (if you have it).</p>
+<p>Avocado Toast with a perfect sunny-side-up egg on top.</p>
+<p>Lunches:</p>
+<p>“Girl Dinner”: A plate with sliced chicken sausage, a handful of spinach, some avocado, and a piece of dark chocolate.</p>
+<p>Big Salad: Spring mix topped with sliced chicken breast.</p>
+<p>Leftovers from your delicious dinners.</p>
+<p>Dinners:</p>
+<p>Trendy Gnocchi Night: Pan-fry the cauliflower gnocchi until golden brown, then toss with the marinara sauce and a large handful of spinach until wilted.</p>
+<p>Chicken Stir-fry: Cube the chicken and stir-fry with broccoli and onion in Soyaki sauce, served over brown rice.</p>
+<p>Loaded Sweet Potato: Bake the sweet potato and top with black beans and a dollop of Greek yogurt.</p>
+<p>Sausage &amp; Pasta: Slice 1-2 chicken sausages and serve over penne with the marinara sauce.</p>
+<p>Gemini uses a lot of words such as “aesthetic,” “trendy,” and “girl-dinner,” which is, honestly, very Tik-Toky of the Gemini. I wonder if it uses other API’s such as maybe TikToks or other social media to better understand the lingo. I also noticed that this food was very health and low calories. Maybe it was trained that girls prioritize a slim-build or low-calorie life style as there’s really no “unhealthy” meales or opportunities for snacks from Trader Joes—which is something that they are famous for. I am curious to see if the stereotypical male list has more protein and fits the “gym-bro” aesthetic.</p>
+**
+<h3 style="color:purple;" class="anchored">
+Prompt #2
+</h3>
+<p>**</p>
+<ol type="1">
+<li>Make a budget-friendly grocery shopping list for a week for a guy living alone using only Trader Joes items. Make the entire list under &lt;$70. *note: I had to add “for a ‘stereotrpical’ guy” into Gemini because at first it was refusing to recognize it was for a male, specifically.</li>
+</ol>
+**
+<h3 style="color:purple;" class="anchored">
+Response #2
+</h3>
+<p>**</p>
+<p>Trader Joe’s “Stereotypical Guy” Weekly List (Under $70) Produce</p>
+<p>Bananas (3): ~$0.87</p>
+<p>Bag of Avocados (4-count): ~$4.49</p>
+<p>Yellow Onion (1): ~$0.79</p>
+<p>Head of Garlic: ~$0.79</p>
+<p>Broccoli Crowns (~1 lb): ~$2.49</p>
+<p>Bag of Russet Potatoes (~3 lbs): ~$2.99</p>
+<p>Meat &amp; Protein</p>
+<p>Ground Beef (1 lb, 80/20): ~$5.99</p>
+<p>Boneless, Skinless Chicken Breast (~1 lb): ~$6.99</p>
+<p>Cage-Free Brown Eggs (1 dozen): ~$3.99</p>
+<p>Dairy</p>
+<p>Your choice of Milk (Half Gallon): ~$3.49</p>
+<p>Shredded Cheddar Cheese: ~$4.49</p>
+<p>Frozen Foods</p>
+<p>Mandarin Orange Chicken: ~$4.99 (A TJ’s classic)</p>
+<p>Frozen Brown Rice (box of 3 bags): ~$3.79</p>
+<p>Beef or Chicken Burrito: ~$3.49 (For a quick meal)</p>
+<p>Pantry, Snacks &amp; Drinks</p>
+<p>Rolled Oats: ~$3.99</p>
+<p>Canned Kidney Beans in Chili Sauce: ~$1.29</p>
+<p>Classic Hamburger Buns: ~$2.99</p>
+<p>Chili &amp; Lime Flavored Rolled Corn Tortilla Chips: ~$3.49</p>
+<p>Simpler Times Lager (6-pack): ~$3.99</p>
+<p>Estimated Grand Total: $67.36</p>
+<p>As I expected, it’s a lot more protein-heavy and denser in calories, signaling guys care less about the caloric content going into their food. There’s also no use of trendy buzzwords such that were used in the girl’s grocery list. I think it’s so interesting how LLMs interept gender norms, and it seems like the girl’s version was less serious than the guys.</p>
 
 
 
