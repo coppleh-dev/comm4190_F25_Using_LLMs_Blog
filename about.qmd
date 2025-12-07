@@ -1,6 +1,6 @@
 ---
-title: About
-image: profile.jpg
+title: Helen's about page
+image: hamburger.jped
 about:
   template: jolla
 ---
