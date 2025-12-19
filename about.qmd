@@ -5,4 +5,5 @@ about:
   template: jolla
 ---
 
-About this blog: Helen's blogs are a brain dump of her mind! Come along for the ride!
+About this blog
+Helen's blogs are a brain dump of her mind! Come along for the ride!
