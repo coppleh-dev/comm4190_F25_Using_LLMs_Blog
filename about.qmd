@@ -1,9 +1,8 @@
 ---
 title: Helen's about page
-image: hamburger.jped
+image: hamburger.jpeg
 about:
   template: jolla
 ---
 
-About this blog
-
+About this blog: Helen's blogs are a brain dump of her mind! Come along for the ride!
