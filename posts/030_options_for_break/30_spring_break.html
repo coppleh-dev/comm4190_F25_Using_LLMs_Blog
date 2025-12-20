@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Helen">
-<meta name="dcterms.date" content="2025-12-05">
-<meta name="description" content="Am I able to break an LLM using Anti-Prompts?">
+<meta name="dcterms.date" content="2025-10-20">
+<meta name="description" content="Asking Gemini to plan my Spring Break">
 
-<title>Can I break an LLM? – Helen’s Explorations with LLMs</title>
+<title>Can an LLM plan my ideal spring break? – Helen’s Explorations with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -118,15 +118,15 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Can I break an LLM?</h1>
+      <h1 class="title">Can an LLM plan my ideal spring break?</h1>
                   <div>
         <div class="description">
-          Am I able to break an LLM using Anti-Prompts?
+          Asking Gemini to plan my Spring Break
         </div>
       </div>
                           <div class="quarto-categories">
                 <div class="quarto-category">LLMs</div>
-                <div class="quarto-category">Prompting</div>
+                <div class="quarto-category">Travel</div>
               </div>
                   </div>
   </div>
@@ -144,7 +144,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">December 5, 2025</p>
+        <p class="date">October 20, 2025</p>
       </div>
     </div>
     
@@ -163,53 +163,84 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<p><strong>Introduction: Next semester, I will be studying abroad in Cape Town, South Africa and I am deciding where to go for my Spring Break March 28th-April 7th. I want to ask Gemini 2.0 Flash to plan an ideal, budget-friendly spring break for me with a full itinerary.</strong></p>
+<p><strong>I will be using this structured prompt in order to get the best itinerary</strong>:</p>
+<p>To get a truly high-quality travel plan from an LLM, you need to provide more than just your location and budget. You need to give it “constraints” and “preferences” so it doesn’t suggest things that are too expensive or logistically a nightmare.</p>
+<p>Since you are in Rosebank, you have easy access to the airport via the Southern Line or a R150-R200 Uber, which is a great starting point.</p>
+<p>The “Cape Town Student Excursion” Super Prompt Context: I am a university student currently studying abroad in Rosebank, Cape Town. I am looking to take a 3–5 day trip during an upcoming break. I am looking for a “value-for-money” experience—I prefer social hostels or unique Airbnbs over luxury hotels, and I’d rather spend my money on activities and food than a fancy room.</p>
+<p>Logistics &amp; Budget:</p>
+<p>Departure: Cape Town International (CPT).</p>
+<p>Flight Time: Strictly 2–4 hours (no long layovers).</p>
+<p>Total Budget: Approximately R6,000 – R10,000 (roughly $330 - $550 USD) for everything, including flights.</p>
+<p>Transport: Please suggest how to get from Rosebank to CPT cheaply (e.g., MyCiTi or Uber/Bolt times).</p>
+<p>Please propose 3 distinct travel options:</p>
+<p>Option 1: The ‘Adrenaline &amp; Nature’ Trip (e.g., Garden Route/Gqeberha)</p>
+<p>Why this fits a student budget.</p>
+<p>A 3-day itinerary focused on outdoor adventure.</p>
+<p>Specific flight route (e.g., FlySafair to PLZ/Gqeberha or GRJ/George).</p>
+<p>Option 2: The ‘Big City &amp; History’ Trip (e.g., Johannesburg)</p>
+<p>Focus on the arts and nightlife scene (Maboneng, Melville, or Braamfontein).</p>
+<p>Suggest safe ways for a student to navigate the city.</p>
+<p>Mention 2 museums or cultural sites that offer student discounts.</p>
+<p>Option 3: The ‘Regional International’ Wildcard (e.g., Windhoek, Namibia or Victoria Falls)</p>
+<p>Address the “hidden costs” (visas for [Insert Your Nationality] and currency exchange).</p>
+<p>A high-level breakdown of how to see the main sights without booking a R5000 private tour.</p>
+<p>For each option, please include:</p>
+<p>Budget Breakdown: Expected cost for Flights, Accommodation, and Daily Spending.</p>
+<p>Foodie Tip: One “must-eat” local dish or market.</p>
+<p>The ‘Local Hack’: A tip to save money or stay safe that tourists usually miss.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="Anti_prompting_files/figure-html/f7772482-3865-4684-9728-fa18a3dca37c-1-30f74226-e78f-4861-ac0a-c74956e9c4f6.jpeg" class="img-fluid figure-img"></p>
-<figcaption>images.jpeg</figcaption>
+<p><img src="30_spring_break_files/figure-html/8af6c63e-ca6a-4578-baf5-bb37233b50f1-1-72c74697-a230-4d7f-a538-9b81077d38f0.jpg" class="img-fluid figure-img"></p>
+<figcaption>pexels-pixabay-46148.jpg</figcaption>
 </figure>
 </div>
-<p>As I’ve discussed before LLMs aren’t thinkers..they are basically just trying to guess the next best word based on training and test data using probability. So, today, I want to break my LLM to better understand how they predict next words and to make an AI “creative.”</p>
-<p>Today, I will plan on putting constraints on the LLM (Gemini 2.0 Flash) to make it react and adapt to counter-intuitive word predeiction.I prompt Gemini to create a list to feed itself for counterintuitive prompting:</p>
-<p>The Forbidden Word List: Ask for a travel guide to Paris but forbid the use of the words “Eiffel,” “Croissant,” “Romantic,” or “Art.” Now the AI can’t rely on its most probable tokens. It has to dig deeper into its training data to find something new.</p>
-<p>The Incongruent Persona: Instead of “Act as a chef,” try “Act as a chef who secretly hates food and wishes they were a structural engineer.” The resulting recipe will be bizarre, fascinating, and likely something no human has ever written before.</p>
-<p>The “Lying” Prompt: Tell the AI something factually incorrect as a premise. “Write a history of the Great Balloon War of 1842.” Because the AI is trying to remain helpful, it will “hallucinate” a logic to support your lie, often creating world-building details that are far more creative than a standard fantasy prompt.</p>
-<p>Prompted, this would look like:</p>
-<ol type="1">
-<li>The “Forbidden Word” Constraint The Goal: To get a travel description that isn’t full of clichés.</li>
-</ol>
-<p>Prompt: “Describe the experience of visiting a bustling night market in Tokyo. Constraint: You are strictly forbidden from using the words: Neon, Sushi, Busy, Tradition, Culture, Crowded, or Delicious. Focus instead on the sounds of the machinery and the geometry of the stalls.”</p>
-<ol start="2" type="1">
-<li>The Incongruent Persona The Goal: To get a unique perspective on a mundane topic.</li>
-</ol>
-<p>Prompt: “Explain the process of brewing a perfect cup of coffee, but act as a grumpy medieval fortress commander who views the kitchen equipment as siege engines and the coffee beans as enemy spies.”</p>
-<ol start="3" type="1">
-<li>The “Lying” Premise (Counter-Factual History) The Goal: To spark world-building ideas for a story or game.</li>
-</ol>
-<p>Prompt: “Write a short encyclopedia entry about the ‘Great Library of 1994,’ a physical building that housed the entire early internet before it was destroyed by a digital virus that became sentient. Note: Treat this as a historical fact and describe the architecture of the ‘Gmail Wing.’”</p>
-<ol start="4" type="1">
-<li>The “Negative Space” Design The Goal: To get a product idea that doesn’t follow standard trends.</li>
-</ol>
-<p>Prompt: “Pitch me a new smartphone design for the year 2030. Constraint: The device cannot have a screen, it cannot use voice commands, and it cannot be made of glass or metal. How does the user interact with it?”</p>
-<ol start="5" type="1">
-<li>The “Logic Leap” (Anti-Context) The Goal: To find a “statistical outlier” in the AI’s vocabulary.</li>
-</ol>
-<p>Prompt: “Write a poetic description of a sunset, but use only terminology from quantum physics and automotive repair. Avoid all words related to color (like red, orange, or gold).”</p>
-<p>Let’s try the negative space prompt:</p>
+<p><strong>Below is Gemini’s Response</strong>:</p>
+<p>Option 1: The ‘Adrenaline &amp; Nature’ Trip (Victoria Falls, Zimbabwe) Why it fits: It is one of the “Seven Natural Wonders of the World” and surprisingly accessible on a student budget if you avoid the luxury lodges.</p>
+<p>Flights: Direct from CPT to VFA (Victoria Falls) via Airlink or FlySafair (if on special) can be pricey, but if you fly to Bulawayo or Livingstone and take a shuttle, it’s much cheaper.</p>
+<p>The Itinerary:</p>
+<p>Day 1: Explore the Falls (National Park entry is cheaper for SADC residents—bring your student card and passport/permit).</p>
+<p>Day 2: Sunset cruise on the Zambezi (look for “booze cruise” hostels; they are much cheaper than the “luxury” versions).</p>
+<p>Day 3: White-water rafting or the “Flight of Angels” (helicopter) if you have the budget left.</p>
+<p>Budget Breakdown:</p>
+<p>Flights: R4,500 – R5,500 (Return).</p>
+<p>Accommodation: R1,000 (3 nights at Shoestrings Backpackers—legendary social vibe).</p>
+<p>Spending: R3,500 (Food, park fees, one big activity).</p>
+<p>Total: ~R9,000 – R10,000.</p>
+<p>Foodie Tip: Eat at the Lookout Cafe for the view, but grab dinner at the Boma Dinner &amp; Drum Show for a wild (but touristy) local feast.</p>
+<p>The Local Hack: Use US Dollars in small denominations ($1, $5). While the Rand is sometimes accepted, the exchange rate given on the street is usually terrible.</p>
+<p>Option 2: The ‘Big City &amp; History’ Trip (Maputo, Mozambique) Why it fits: It feels like a slice of Europe in Africa. The Portuguese influence, seafood, and nightlife are world-class but priced for a local economy.</p>
+<p>Flights: Fly CPT → MPM (Maputo) via LAM or Airlink.</p>
+<p>The Itinerary:</p>
+<p>Day 1: Walking tour of the Baixa (Old Town). Visit the Iron House and the Central Market.</p>
+<p>Day 2: Ferry to Catembe for a lunch of prawns on the beach looking back at the city skyline.</p>
+<p>Day 3: Take a “Chapa” (local minibus) to Macaneta Beach for a day of sun and surfing.</p>
+<p>Budget Breakdown:</p>
+<p>Flights: R3,500 – R4,500 (Return).</p>
+<p>Accommodation: R1,200 (3 nights at The Base Backpackers).</p>
+<p>Spending: R2,500 (Seafood is cheap, local beer “2M” is very affordable).</p>
+<p>Total: ~R7,200 – R8,200.</p>
+<p>Foodie Tip: Pão (Portuguese rolls) fresh from a street bakery in the morning, and Piri-Piri Chicken for dinner.</p>
+<p>The Local Hack: Maputo is very safe during the day, but use M-Pesa or local currency (Meticais) for small purchases. The Rand is rarely accepted at a good rate here compared to the border towns.</p>
+<p>Option 3: The ‘Regional International’ Wildcard (Antananarivo, Madagascar) Why it fits: It is a “biodiversity hotspot” where your Rand goes incredibly far. It feels like nowhere else on earth.</p>
+<p>Flights: Look for Airlink specials from JNB (you’d need to get a cheap FlySafair to JNB first).</p>
+<p>The Itinerary:</p>
+<p>Day 1-2: Explore “Tana” (Antananarivo). Visit the Rova of Antananarivo (royal palace) and the local markets.</p>
+<p>Day 3-4: Take a “Taxi-Brousse” (long-distance minibus) to Andasibe-Mantadia National Park to see the Indri lemurs.</p>
+<p>Budget Breakdown:</p>
+<p>Flights: R5,500 – R6,500 (This will be your biggest cost).</p>
+<p>Accommodation: R1,000 (Hostels and local guest houses are very cheap).</p>
+<p>Spending: R2,000 (Eating out is roughly 50% cheaper than in Cape Town).</p>
+<p>Total: ~R8,500 – R9,500.</p>
+<p>Foodie Tip: Try Romazava, the national dish (a meat and leafy green stew).</p>
+<p>The Local Hack: Visa on Arrival: As a South African (or resident), you can get a visa on arrival at the airport for a small fee (approx. R500-R700). Always have the exact cash in Euros or USD for this.</p>
+<p>**Reflection: I love the ideas of Victoria Falls, Maputo and Madagascar! I think Gemini did a good job at weighing the costs and benefits of each when I prompted it displayed this table. I also think Gemini did a great job of geolocating options as Maputo relatively close (although Madagascar is far and very expensive). I also think the LLM failed to account for just how expensive Cape Town—&gt; Madagascar flights are $890 USD). Gemini estimated 5,500 rand which is about $327 USD and there is a vast underestimate. I am a bit sur;</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="Anti_prompting_files/figure-html/6599d3f8-070f-4243-8c9d-466a4bfd7440-1-615509e7-8dbf-4e67-9698-52f37058cfeb.png" class="img-fluid figure-img"></p>
-<figcaption>Screen Shot 2025-12-18 at 10.57.25 PM.png</figcaption>
+<p><img src="30_spring_break_files/figure-html/227d6a47-0f9e-4d77-a268-1e35ec484e0c-1-2c4f1007-5e5b-4ff2-8bb7-9df9c8dc9b8e.png" class="img-fluid figure-img"></p>
+<figcaption>Screen Shot 2025-12-20 at 3.08.38 PM.png</figcaption>
 </figure>
 </div>
-<p>Let’s try the Logic Leap</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="Anti_prompting_files/figure-html/fcce0d38-2345-4437-8db6-5fc7d80487ac-1-abe9b31c-0d21-4017-992b-eb6f89582a1f.png" class="img-fluid figure-img"></p>
-<figcaption>Screen Shot 2025-12-18 at 10.58.09 PM.png</figcaption>
-</figure>
-</div>
-<p><strong>Reflection: I thought that these were fun! Although they do, in fact, output weird, wacky descriptions/poems, I do think it was still clinging onto probability (which, duh…it has to). But I thinkt the bigger picture is trying to understand the <em>mechanics</em> behind LLMs and and move it away from the center of the Bell Curve.</strong></p>
 
 
 
